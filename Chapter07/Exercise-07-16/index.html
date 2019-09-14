@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array as a queue</title>
+  <script>
+    // --- Queue
+    var arr = [1, 2, 3];
+    arr.push(4);
+    arr.push(5);
+    console.log(arr.shift());    // 1
+    console.log(arr.shift());    // 2
+    console.log(arr.toString()); // 3,4,5
+
+    // --- Reverse queue
+    var arr = [1, 2, 3];
+    arr.unshift(0);
+    arr.unshift(-1);
+    console.log(arr.pop());      // 3
+    console.log(arr.pop());      // 2
+    console.log(arr.toString()); // -1,0,1
+  </script>
+</head>
+<body>
+  Listing 7-16: View the console output
+</body>
+</html>

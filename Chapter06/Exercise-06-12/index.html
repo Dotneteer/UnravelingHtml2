@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove and replace elements</title>
+</head>
+<body onload="decorateItems()">
+  <p>Important things to do:</p>
+  <ul id="high">
+    <li>Feed the dog</li>
+    <li>Get Doug from school</li>
+    <li>Invite your mother-in-law</li>
+  </ul>
+  <p>Low priority things to do:</p>
+  <ul id="low">
+    <li>Eat the donut</li>
+    <li>Visit your dentist</li>
+    <li>Chat with Sarah</li>
+  </ul>
+  <script>
+    function moveItem(node) {
+      var divNode = node.parentNode;
+      var liNode = divNode.parentNode;
+      var ulNode = liNode.parentNode;
+      var fromUl = ulNode.id;
+      var toUl = fromUl == 'high'
+        ? document.getElementById('low')
+        : document.getElementById('high');
+      var clone = liNode.cloneNode(true);
+      toUl.appendChild(clone);
+      ulNode.removeChild(liNode)
+    }
+
+    function closeItem(node) {
+      var divNode = node.parentNode;
+      var liNode = divNode.parentNode;
+      var ulNode = liNode.parentNode;
+      ulNode.removeChild(liNode)
+    }
+
+    function decorateItems() {
+      var liNodes = document.getElementsByTagName('li');
+      for (i = 0; i < liNodes.length; i++) {
+        var liNode = liNodes[i];
+        liNode.innerHTML = '<div>' + liNode.textContent
+          + ' <button onclick="moveItem(this)">'
+          + 'Move</button> '
+          + '<button onclick="closeItem(this)">'
+          + 'Done</button></div>';
+      }
+    }
+  </script>
+</body>
+</html>

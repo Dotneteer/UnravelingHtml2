@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Tree</title>
+  <script>
+    function logNavigation() {
+      console.log('Children of the document')
+      var children = document.childNodes;
+      for (var i = 0; i < children.length; i++) {
+        logNodeInfo(i, children[i]);
+      }
+
+      console.log('Children of <body>')
+      var current = document.body.firstChild;
+      var index = 0;
+      while (current != null) {
+        logNodeInfo(index, current);
+        index++;
+        current = current.nextSibling;
+      }
+
+      console.log('Children of <p>')
+      children = document.getElementsByTagName('p')[0]
+        .childNodes;
+      for (var i = 0; i < children.length; i++) {
+        logNodeInfo(i, children[i]);
+      }
+
+      console.log('Parent of <li>');
+      var parent = document.getElementsByTagName('li')[0]
+        .parentNode;
+      logNodeInfo(0, parent);
+    }
+
+    function logNodeInfo(index, node) {
+      var nodeVal = node.nodeValue == null
+        ? '{empty}'
+        : node.nodeValue.replace('\n', '{nl}');
+      console.log('  ' + index + ': ('
+        + node.nodeType + ') '
+        + node.nodeName + ' | '
+        + nodeVal);
+    }
+  </script>
+</head>
+<body onload="logNavigation()">
+  <h1>Chapter <strong>#1</strong>: HTML Basics</h1>
+  <!-- This is a comment -->
+  <p class="firstPara">
+    This is the first paragraph of this chapter
+  </p>
+  <ul>
+    <li>Item #1</li>
+    <li>Item #2</li>
+  </ul>
+</body>
+</html>

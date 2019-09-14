@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Descendant selectors</title>
+  <style>
+    body {
+      font-family: Verdana, Helvetica, sans-serif;
+    }
+
+    h1 strong {
+      color: red;
+    }
+
+    div.important strong {
+      color: white;
+      background-color: #404040;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is <strong>Important</strong></h1>
+  <div class="important">
+    <p>
+      Lorem ipsum dolor <strong>sit</strong>
+      amet, consectetur <strong>adipiscing</strong>
+      elit fusce vel sapien elit in malesuada semper mi,
+      <strong>id</strong> sollicitudin urna fermentum.
+    </p>
+  </div>
+  <div>
+    <p>
+      Lorem <strong>ipsum</strong> dolor sit amet, consectetur
+      adipiscing elit fusce vel.
+    </p>
+  </div>
+</body>
+</html>

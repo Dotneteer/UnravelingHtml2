@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table of Contents</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body >
+  <h1 onclick="handleClick(this)">Introduction</h1>
+  <h2>Whom this book is for?</h2>
+  <h2>Errata</h2>
+  <h1 onclick="handleClick(this)">Chapter 1</h1>
+  <h2>What you will learn in this chapter</h2>
+  <h2>Summary</h2>
+  <h1 onclick="handleClick(this)">Chapter 2</h1>
+  <h2>Recap</h2>
+  <h2>Conclusion</h2>
+  
+  <script>
+    function handleClick(node) {
+      var value = node.getAttribute('class') || '';
+      value = value === '' ? 'clicked' : '';
+      node.setAttribute('class', value);
+    }
+  </script>
+
+</body>
+</html>

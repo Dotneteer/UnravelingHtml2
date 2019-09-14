@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is the title of this page!</title>
+</head>
+<body style="background-color: #dddddd">
+  <button onclick="displayTitle()">
+    Action!
+  </button>
+  <p id="output"></p>
+  <script>
+    function displayTitle() {
+      var outputPar = document.getElementById("output");
+      outputPar.innerHTML = document.title;
+    }
+  </script>
+</body>
+</html>

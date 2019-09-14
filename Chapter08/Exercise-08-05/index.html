@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recursive functions</title>
+  <script>
+    function fibonacci(index) {
+      if (index == 0) return 0;
+      if (index == 1) return 1;
+      return fibonacci(index - 1) +
+        fibonacci(index - 2);
+    }
+
+    for (var i = 0; i < 10; i++) {
+      console.log(fibonacci(i));
+    }
+  </script>
+</head>
+<body>
+  Listing 8-5: View the console output
+</body>
+</html>

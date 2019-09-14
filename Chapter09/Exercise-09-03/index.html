@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple selectors applied</title>
+  <style>
+    /* Tag selector*/
+    h1 { color: red; }
+
+    /* Class selector */
+    .blue {
+      color: blue;
+      background-color: yellow;
+    }
+
+    /* ID selector */
+    #greenLabel { color: green; }
+  </style>
+</head>
+<body>
+  <h1>This should be RED</h1>
+  <h1 class="blue">Now this should be BLUE</h1>
+  <h1 class="blue" id="greenLabel">GREEN!</h1>
+</body>
+</html>

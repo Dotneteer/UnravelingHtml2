@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Table (no styling)</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 4px 8px;
+      border: 1px solid dimgray;
+    }
+
+    td:nth-child(even) {
+      background-color: lightblue;
+    }
+
+    caption {
+      font-size: 0.8em;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>
+      Monthly Sales<br />(March, 2013)
+    </caption>
+    <tr>
+      <td>Office #1942</td><td>12%</td>
+    </tr>
+    <tr>
+      <td>Office #2612</td><td>42%</td>
+    </tr>
+    <tr>
+      <td>Office #3125</td><td>27%</td>
+    </tr>
+  </table>
+</body>
+</html>

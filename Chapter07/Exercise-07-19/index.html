@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splice</title>
+  <script>
+    var nums = ["one", "two", "three"];
+
+    // Insert a new element
+    var removed = nums.splice(2, 0, "hey!");
+    console.log(nums.toString());
+
+    // Remove elements
+    removed = nums.splice(2, 2);
+    console.log(nums.toString());
+
+    // Replace elements
+    removed = nums.splice(0, 1, 2, 3, 4);
+    console.log(nums.toString());
+  </script>
+</head>
+<body>
+  Listing 7-19: View the console output
+</body>
+</html>

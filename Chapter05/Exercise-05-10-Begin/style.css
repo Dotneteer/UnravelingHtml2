@@ -1,0 +1,9 @@
+﻿body {
+  font-family: Verdana, Arial, sans-serif;
+  margin-left: 24px;  
+}
+
+#myCanvas {
+  border: 4px solid dimgray;
+  padding: 4px;
+}

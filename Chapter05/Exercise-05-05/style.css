@@ -1,0 +1,9 @@
+﻿body {
+  font-family: Verdana, Arial, sans-serif
+}
+
+button {
+  padding: 8px 16px;
+  border: 2px dotted dimgray;
+  border-radius: 12px;
+}

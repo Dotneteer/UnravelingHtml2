@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The onerror event</title>
+  <script>
+    function sometimesWorks(arg) {
+      if (arg == 1) return;
+      throw "You're unlucky";
+    }
+
+    function bet(arg, catchHere) {
+      if (catchHere) {
+        try {
+          sometimesWorks(arg);
+        } catch (error) {
+          // --- Caught
+        }
+      } else {
+        sometimesWorks(arg);
+      }
+    }
+
+    function tryThis() {
+      onerror =
+        function (message, url, line) {
+          alert("URL '" + url
+            + " caused this message '"
+            + message + "' in line "
+            + line);
+          return false;
+        };
+
+      // These work
+      bet(1, true);
+      bet(1, false);
+
+      // This raises an error
+      bet(3, false);
+    }
+  </script>
+</head>
+<body onload="tryThis()">
+</body>
+</html>

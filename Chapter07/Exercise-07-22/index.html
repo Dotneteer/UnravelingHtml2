@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>every(), some()</title>
+  <script>
+    var test = [12, 5, 3, 41, 23].every(isPositive);
+    console.log(test); // true;
+    test = [12, 0, 3, -41, 23].every(isPositive);
+    console.log(test); // false;
+    var test = [12, 5, 3, 41, 23].some(greaterThan10);
+    console.log(test); // true;
+
+    function isPositive(e, i, a) {
+      return e > 0;
+    }
+
+    function greaterThan10(e, i, a) {
+      return e > 10;
+    }
+  </script>
+</head>
+<body>
+  Listing 7-22: View the console output
+</body>
+</html>

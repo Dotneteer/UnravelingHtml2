@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Constructor function with method</title>
+  <script>
+    var Employee = function (id, firstName,
+      lastName, title) {
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.title = title;
+      this.getFullName = function () {
+        return this.lastName + ", " + this.firstName;
+      }
+    }
+
+    var philip = new Employee(1, "Philip", "Moore",
+      "CEO");
+    var jane = new Employee(2, "Jane", "Mortimer",
+      "CFO");
+
+    console.log(philip.getFullName());
+    console.log(jane.getFullName());
+  </script>
+</head>
+<body>
+  Listing 8-14: View the console output
+</body>
+</html>

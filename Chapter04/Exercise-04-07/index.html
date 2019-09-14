@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Registration</title>
+  <style>
+    body {
+      margin-left: 24px;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    label {
+      display: inline-block;
+      width: 80px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Select a Car for the report</h3>
+  <form action="#">
+    <label for="car">Car: </label>
+    <select id="car">
+      <optgroup label="Japanese Cars">
+        <option value="honda">Honda</option>
+        <option value="toyota">Toyota</option>
+        <option value="lexus">Lexus</option>
+      </optgroup>
+      <optgroup label="German Cars">
+        <option value="audi">Audi</option>
+        <option value="vw">Volkswagen</option>
+        <option value="mercedes">Mercedes</option>
+      </optgroup>
+    </select>
+    <br />
+    <input type="submit" value="Report" />
+  </form>
+</body>
+</html>

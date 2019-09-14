@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object constructor</title>
+  <script>
+    // Define a constructor for Car
+    var Car = function (manuf, type, regno) {
+      this.manufacturer = manuf;
+      this.type = type;
+      this.regno = regno;
+    }
+
+    // Create a Car
+    var car = new Car("Honda",
+      "FR-V", "ABC-123");
+
+    // Display car properties
+    console.log(car);
+
+    // Oh, I forgot the year...
+    car.year = 2007;
+
+    // Now, display it again
+    console.log(car);
+  </script>
+</head>
+<body>
+  Listing 7-2: View the console output
+</body>
+</html>

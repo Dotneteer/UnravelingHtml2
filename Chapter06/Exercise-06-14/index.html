@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change style with DOM</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    td, th {
+      padding: 4px 8px;
+      text-align: center;
+      border: 2px solid dimgray;
+    }
+
+    th {
+      font-weight: normal;
+      background-color: cornflowerblue;
+      color: white;
+    }
+
+    td {
+      color: dimgray;
+      font-weight: bold;
+    }
+
+    .origin {
+      background-color: navy;
+      color: lightgoldenrodyellow;
+    }
+
+    table {
+      border: 4px solid dimgray;
+      border-collapse: collapse;
+    }
+  </style>
+  <style id="tableStyle">
+    table {
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <p>Change style with CSS manipulation</p>
+  <table border="1">
+    <tr>
+      <td rowspan="2" colspan="2">XOR</td>
+      <th id="input" colspan="2">Input</th>
+    </tr>
+    <tr>
+      <th headers="input" scope="col">false</th>
+      <th headers="input" scope="col">true</th>
+    </tr>
+    <tr>
+      <th id="output" rowspan="2">Output</th>
+      <th headers="output" scope="row">false</th>
+      <td>false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th headers="output" scope="row">true</th>
+      <td>true</td>
+      <td>false</td>
+    </tr>
+  </table>
+  <br />
+  <button onclick="toGreen()">
+    Set table background to green
+  </button>
+  <br />
+  <button onclick="toRed()">
+    Set table background to red
+  </button>
+  <script>
+    function toGreen() {
+      setBackgroundTo('lightgreen');
+    }
+
+    function toRed() {
+      setBackgroundTo('orangered');
+    }
+
+    function setBackgroundTo(color) {
+      var styleDef = document
+        .getElementById('tableStyle');
+      styleDef.innerHTML = "table { "
+        + "background-color: "
+        + color + "; }";
+    }
+  </script>
+</body>
+</html>

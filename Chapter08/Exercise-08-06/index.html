@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recursive function expression</title>
+  <script>
+    var fiboSeq =
+    function fibo(index) {
+      if (index == 0) return 0;
+      if (index == 1) return 1;
+      return fibo(index - 1) +
+        fibo(index - 2);
+    }
+
+    for (var i = 0; i < 10; i++) {
+      console.log(fiboSeq(i));
+    }
+  </script>
+</head>
+<body>
+  Listing 8-6: View the console output
+</body>
+</html>

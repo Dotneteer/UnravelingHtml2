@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sibling selectors</title>
+  <style>
+    body {
+      font-family: Verdana, Helvetica, sans-serif;
+      margin-left: 16px;
+    }
+    p { margin: 0; }
+    h1 + p { background-color: yellow; }
+    h1 + span { background-color: orangered; }
+    h1 ~ p { font-style: italic; }
+    h1 ~ span { 
+      display: block;
+      font-weight: bold;
+    }
+    h1 ~ * { margin-left: 24px; }
+  </style>
+</head>
+<body>
+  <h1>I'm looking for my siblings...</h1>
+  <p>I'm a direct sibling (p)</p>
+  <span>I'm a (span) sibling of (h1)</span>
+  <p>I'm another sibling of type (p)</p>
+  <p>Let me tell you, I'm (p), too</p>
+  <span>I'm another span of (h1) :-)</span>
+</body>
+</html>

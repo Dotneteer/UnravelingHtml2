@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catching event parameters</title>
+  <style>
+    #rectangle {
+      position: absolute;
+      left: 24px;
+      top: 24px;
+      width: 200px;
+      height: 100px;
+      background-color: navy;
+      color: white;
+    }
+
+    #pos {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="rectangle" onmousedown="handler(event)">
+    <p id="pos">(?, ?)</p>
+  </div>
+  <script>
+    function handler(event) {
+      var pos = document.getElementById('pos');
+      pos.textContent = '(' + event.x + ', ' + event.y + ')';
+    }
+  </script>
+</body>
+</html>

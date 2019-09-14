@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudoclassical inheritance</title>
+  <script>
+    // --- Base type
+    var Vehicle = function (vendor) {
+      this.vendor = vendor;
+    };
+
+    // --- Base type behavior
+    Vehicle.prototype.getVendor = function() {
+      return this.vendor;
+    };
+    Vehicle.prototype.getType = function() {
+      return "vehicle";
+    };
+
+    // --- Derived type
+    var Car = function(vendor, wheel) {
+      Vehicle.call(this, vendor);
+      this.wheel = wheel;
+    };
+
+    // --- Chain to base type
+    Car.prototype = new Vehicle();
+
+    // --- Override behavior
+    Car.prototype.getType = function() {
+      return "car";
+    };
+
+    // --- Derived type
+    var Boat = function(vendor, propeller) {
+      Vehicle.call(this, vendor);
+      this.propeller = propeller;
+    };
+
+    // --- Chain to base type
+    Boat.prototype = new Vehicle();
+
+    // --- Override behavior
+    Boat.prototype.getType = function() {
+      return "boat";
+    };
+
+    // --- Test
+    var car = new Car("BMW", 4);
+    var boat = new Boat("Yamaha", 2);
+
+    console.log("It's a " + car.getType());
+    console.log(car.getVendor());
+    console.log("wheels: " + car.wheel);
+    console.log("It's a " + boat.getType());
+    console.log(boat.getVendor());
+    console.log("props: " + boat.propeller);
+  </script>
+</head>
+<body>
+  Listing 8-20: View the console output
+</body>
+</html>

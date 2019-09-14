@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Child selectors</title>
+  <style>
+    article > h2 {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h2>Outside of article</h2>
+  <article>
+    <h2>Within article</h2>
+    <div>
+      <h2>Not directly within article</h2>
+    </div>
+  </article>
+</body>
+</html>

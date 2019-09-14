@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alternating Table Columns</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    table { 
+      border-collapse: collapse;
+    }
+
+    td, th {
+      padding: 4px 8px;
+      border: 1px solid dimgray;
+    }
+
+    th {
+      font-weight: normal;
+      background-color: navy;
+      color: white;
+    }
+
+    .result {
+      background-color: lightblue;
+    }
+
+  </style>
+</head>
+<body>
+  <table>
+    <colgroup>
+      <col span="2" />
+      <col class="result" />
+    </colgroup>
+    <tr>
+      <th>Region</th><th>Code</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>North</td><td>N</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <td>East</td><td>E</td>
+      <td>42%</td>
+    </tr>
+    <tr>
+      <td>South</td><td>S</td>
+      <td>27%</td>
+    </tr>
+    <tr>
+      <td>West</td><td>W</td>
+      <td>19%</td>
+    </tr>
+  </table>
+</body>
+</html>

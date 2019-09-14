@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Issue with this</title>
+  <script>
+    var type = "Mercedes";
+
+    var myCar = {
+      type: "BMW",
+
+      getType: function () {
+        return this.type;
+      },
+
+      getTypeFuncion: function () {
+        return function () {
+          return this.type;
+        }
+      }
+    };
+
+    console.log(myCar.getType());
+    console.log(myCar.getTypeFuncion()());
+  </script>
+</head>
+<body>
+  Listing 8-8: View the console output
+</body>
+</html>

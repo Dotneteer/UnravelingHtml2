@@ -1,0 +1,11 @@
+﻿.fish-table {
+  border: 2px solid #07093D;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.fish-table td {
+  border: 1px solid #07093D;
+  border-left: 0;
+  border-right: 0;
+}

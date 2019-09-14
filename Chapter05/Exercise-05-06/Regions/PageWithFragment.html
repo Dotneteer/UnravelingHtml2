@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Page with Region</title>
+</head>
+<body>
+  <h1>This is Page #2 of Region #1.</h1>
+  <a href="/Regions/PageWithFragment.html#date">
+    Fragment within this page #1
+  </a>
+  <br />
+  <a href="#date">
+    Fragment within this page #2
+  </a>
+  <br />
+  <a href="/index.html">
+    <img src="/Images/left.png" />
+    Back to the index page
+  </a>
+  <p id="date"></p>
+  <script>
+    var dateElement = document.getElementById("date");
+    dateElement.innerHTML = new Date();
+  </script>
+</body>
+</html>

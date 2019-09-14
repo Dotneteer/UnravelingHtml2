@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Sample 12</title>
+  <style>
+    .box {
+      background-image: url(Backgrounds/sizeeye.png);
+      float: left;
+      padding: 20px;
+      border: 12px dashed blue;
+      margin: 16px;
+    }
+
+    .content {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="box" style="background-clip: border-box;">
+    <div class="content"></div>
+  </div>
+  <div class="box" style="background-clip: padding-box;">
+    <div class="content"></div>
+  </div>
+  <div class="box" style="background-clip: content-box;">
+    <div class="content"></div>
+  </div>
+</body>
+</html>

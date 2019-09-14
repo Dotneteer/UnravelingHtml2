@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Styling lists</title>
+  <style>
+    body {
+      font-family: Verdana, Helvetica, sans-serif;
+      margin-left: 16px;
+    }
+    #markup {
+      background-color: lightsteelblue;
+      color: navy;
+      font-size: 1.25em;
+      font-weight: bold;
+      padding: 4px 8px;
+    }
+    #lists {
+      border: 2px solid dimgray;
+      border-collapse: collapse;
+    }
+      #lists td {
+        padding: 4px 16px 4px 4px;
+        vertical-align: top;
+      }
+    #lists th {
+      padding: 2px 8px;
+      text-align: left;
+    }
+    #list th, td {
+      width: 200px;
+    }
+    ol {
+      background-color: lightsteelblue;
+    }
+  </style>
+  <style id="addStyle">
+  </style>
+  <script>
+    function applyStyle() {
+      var image = document.getElementById('image').value;
+      var type = document.getElementById('type').value;
+      var position = document.getElementById('position').value;
+      var rule = 'ul, ol {\n';
+      if (image != '') {
+        rule += '  list-style-image: url(Images/' + image + ');\n';
+      }
+      if (position != '') {
+        rule += '  list-style-position: ' + position + ';\n';
+      }
+      if (type != '') {
+        rule += '  list-style-type: ' + type + ';\n';
+      }
+      rule += '}';
+      var styleTag = document.getElementById('addStyle');
+      styleTag.innerText = rule;
+      var markup = document.getElementById('markup');
+      markup.innerText = rule;
+    }
+  </script>
+</head>
+<body>
+  <h1>Styling Lists</h1>
+  list-style-image:
+  <select id="image" onchange="applyStyle()">
+    <option value="" selected>(none)</option>
+    <option value="cancel.png">Cancel</option>
+    <option value="heart.png">Heart</option>
+    <option value="tick.png">Tick</option>
+    <option value="dummy.png">(invalid)</option>
+  </select>
+  <br/>
+  list-style-position:
+  <select id="position" onchange="applyStyle()">
+    <option value="" selected>(none)</option>
+    <option value="inside">inside</option>
+    <option value="outside">outside</option>
+  </select>
+  <br/>
+  list-style-type:
+  <select id="type" onchange="applyStyle()">
+    <option value="" selected>(none)</option>
+    <option>disc</option>
+    <option>circle</option>
+    <option>square</option>
+    <option>decimal</option>
+    <option>decimal-leading-zero</option>
+    <option>upper-alpha</option>
+    <option>lower-alpha</option>
+    <option>upper-roman</option>
+    <option>lower-roman</option>
+    <option>upper-greek</option>
+    <option>lower-greek</option>
+    <option>(invalid)</option>
+  </select>
+  <hr />
+  <table id="lists">
+    <tr>
+      <th>Ordered List</th>
+      <th>Unordered List</th>
+    </tr>
+    <tr>
+      <td>
+        <ol>
+          <li>First item, First item, First item</li>
+          <li>Second item, Second item, Second item</li>
+          <li>Third item, Third item, Third item</li>
+        </ol>
+      </td>
+      <td>
+        <ul>
+          <li>Apple, Apple, Apple, Apple, Apple</li>
+          <li>Banana, Banana, Banana, Banana, Banana</li>
+          <li>Orange, Orange, Orange, Orange, Orange</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <hr />
+  <p>Style markup:</p>
+  <pre id="markup">(not set)</pre>
+</body>
+</html>

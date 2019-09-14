@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attribute selectors</title>
+  <style>
+    body {
+      font-family: Verdana, Helvetica, sans-serif;
+    }
+
+    a {
+      display: block;
+      margin: 4px 8px;
+      padding: 4px 8px;
+    }
+    a[href="http://msdn.com"] {
+      background-color: orange;
+    }
+    a[href^="http://v"] {
+      background-color: orangered;
+    }
+    a[href$=".com"] { border: 2px solid blue; }
+    a[href*="iki"] { border: 4px dotted green; }
+    p[title] { font-style: italic; }
+    p[title*="HTML"] { background-color: green; }
+    .par[title~="HTML"] { background-color: orange; }
+  </style>
+</head>
+<body>
+  <h1>My favorite links</h1>
+  <a href="http://msdn.com">MSDN</a>
+  <a href="http://visualstudio.com">
+    Visual Studio Services Home
+  </a>
+  <a href="http://visualstudiogallery.com">
+    Visual Studio Extensions
+  </a>
+  <a href="http://wikipedia.org">
+    Wikipedia
+  </a>
+  <a href="http://facebook.com">
+    Facebook
+  </a>
+  <p title="This is HTML" class="par">
+    This paragraph contains the HTML word
+  </p>
+  <p title="SomewhereHTMLIsHere" class="par">
+    This paragraph contains the HTML pattern
+  </p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Sample 14</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    p {
+      text-align: center;
+      margin: 0 0 8px 0;
+    }
+    .wrapper {
+      float: left;
+      margin: 16px;
+    }
+
+    .box {
+      background-image: url(Backgrounds/sizeeye2.png);
+      border: 8px solid maroon;
+      width: 140px;
+      height: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <p>cover</p>
+    <div class="box" style="background-size: cover"></div>
+  </div>
+  <div class="wrapper">
+    <p>contain</p>
+    <div class="box" style="background-size: contain"></div>
+  </div>
+  <div class="wrapper">
+    <p>80px 120px</p>
+    <div class="box" style="background-size: 80px 120px"></div>
+  </div>
+  <div class="wrapper">
+    <p>100% 100%</p>
+    <div class="box" style="background-size: 100% 100%"></div>
+  </div>
+  <div class="wrapper">
+    <p>50% 50%</p>
+    <div class="box" style="background-size: 50% 50%"></div>
+  </div>
+  <div class="wrapper">
+    <p>66% auto</p>
+    <div class="box" style="background-size: 66% auto"></div>
+  </div>
+</body>
+</html>

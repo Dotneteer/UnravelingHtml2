@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Range Sample #1</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="changeby.js"></script>
+</head>
+<body>
+  <ul>
+    <li><a href="index.html">Sample #1</a></li>
+    <li><a href="sample2.html">Sample #2</a></li>
+    <li><a href="sample3.html">Sample #3</a></li>
+    <li><a href="sample4.html">Sample #4</a></li>
+    <li><a href="sample5.html">Sample #5</a></li>
+  </ul>
+  <form action="javascript:changeBy(1)">
+    <label>
+      Number of Machines:
+      <input id="noMachines"
+        type="range" min="1" max="8" value="2" />
+    </label>
+    <br />
+    <input type="submit" value="Increment" />
+  </form>
+</body>
+</html>

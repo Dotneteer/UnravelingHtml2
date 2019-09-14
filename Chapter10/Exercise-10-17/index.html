@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Explicit box size</title>
+  <style>
+    .left, .right {
+      margin: 4px;
+      background-color: lightgray;
+      border: 2px solid blue;
+      width: 80px;
+      height: 60px;
+    }
+
+    .left { float: left; }
+
+    .right {
+      float: right;
+      border-radius: 10px;
+      height: 70px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left"></div>
+  <div class="left"></div>
+  <div class="right"></div>
+  <div class="right"></div>
+  <div class="left"></div>
+  <div class="right"></div>
+</body>
+</html>

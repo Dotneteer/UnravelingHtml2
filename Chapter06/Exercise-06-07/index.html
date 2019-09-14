@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Tree</title>
+  <script>
+    function logContent() {
+      console.log('paragraph content:');
+      var para = document
+        .getElementById('para');
+      console.log('text:' +
+        '"' + para.textContent + '"');
+      console.log('HTML:' + para.innerHTML);
+
+      console.log('ol content:');
+      var ol = document
+        .getElementsByTagName('ol')[0];
+      console.log('text:' +
+        '"' + ol.textContent + '"');
+      console.log('HTML:' + ol.innerHTML);
+    }
+  </script>
+</head>
+<body onload="logContent()">
+  <p id="para">
+    This is an
+    <strong>ordered</strong> list
+  </p>
+  <ol start="1">
+    <li id="item1">Item #1</li>
+    <li id="item2">Item #2</li>
+    <li id="item3">Item #3</li>
+  </ol>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Images and mappings</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h2>A few things about scuba diving</h2>
+  <p>
+    Click on the picture to get some more
+    information about what you see.
+  </p>
+  <img src="Images/MappedPictureWithOverlay.JPG"  
+    usemap="#scubamap"/>
+  <map name="scubamap">
+    <area shape="rect" coords="668,25,723,93" 
+      title="Tiger" href="#Tiger" alt="Tiger" />
+    <area shape="circle" coords="553,122,71" 
+      title="Istvan" href="#Istvan" alt="Istvan" />
+    <area shape="circle" coords="299,121,57" 
+      title="Eszter" href="#Eszter" alt="Eszter" />
+    <area shape="circle" coords="555,210,26" 
+      title="Second Stage"
+      href="#SecondStage" alt="Second Stage" />
+    <area shape="poly" 
+      coords="524,509,558,598,609,578,582,490" 
+      title="Decompression Buoy"
+      href="#DecoBuoy" alt="Deco buoy" />
+  </map>
+  <h2 id="Istvan">Istvan</h2>
+  <p>
+    Istvan is a NASE Dive Master with more than 400 
+    registered underwater dives.
+  </p>
+  <h2 id="Eszter">Eszter</h2>
+  <p>
+    Eszter is a PADI Open Water Diver with about 20 
+    registered underwater dives.
+  </p>
+  <h2 id="Tiger">Tiger</h2>
+  <p>
+    Tiger is Istvan's underwater buddy escorting 
+    him tied to his tank.
+  </p>
+  <h2 id="SecondStage">Second Stage</h2>
+  <p>
+    The second stage is an important part of the 
+    scuba equipment, you breath the air through it.
+  </p>
+  <h2 id="DecoBuoy">Decompression Buoy</h2>
+  <p>
+    Decompression buoy is used to send to the surface
+   while you are under water for your safety stop.
+  </p>
+</body>
+</html>

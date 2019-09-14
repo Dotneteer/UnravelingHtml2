@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Tree</title>
+  <style>
+    .redcolor {
+      color: red;
+    }
+  </style>
+  <script>
+    function logAttributes() {
+      console.log('item1 attributes:');
+      logElementAttrs('item1');
+
+      console.log('item2 attributes:');
+      logElementAttrs('item2');
+
+      console.log('item3 attributes:');
+      logElementAttrs('item3');
+
+      console.log('item2 "class" attribute:');
+      var attr = document.getElementById('item2')
+        .getAttributeNode('class');
+      logNodeInfo(0, attr);
+    }
+
+    function logElementAttrs(id) {
+      var attrs = document.getElementById(id)
+        .attributes;
+      for (var i = 0; i < attrs.length; i++) {
+        logNodeInfo(i, attrs[i]);
+      }
+    }
+
+    function logNodeInfo(index, node) {
+      console.log('  ' + index + ': ('
+        + node.nodeType + ') '
+        + node.nodeName + ' | '
+        + node.nodeValue);
+    }
+  </script>
+</head>
+<body onload="logAttributes()">
+  <p>This is an ordered list</p>
+  <ol start="1">
+    <li id="item1">Item #1</li>
+    <li id="item2" class="redcolor">Item #2</li>
+    <li id="item3" invalid="wrong" 
+        data-myAttr="custom">Item #3</li>
+  </ol>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text styling</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 1.25em;
+    }
+
+    #obliqued {
+      font-style: oblique;
+    }
+
+    #normal-styled {
+      font-style: normal;
+    }
+
+    .spread-out {
+      letter-spacing: 2px;
+    }
+
+    .condensed {
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
+
+    .shadowed {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 4px 4px 2px dimgray;
+    }
+
+    #stretched-words {
+      word-spacing: 3ex;
+    }
+  </style>
+</head>
+<body>
+  <p id="obliqued">
+    This paragraph is displayed in italic except
+    <span id="normal-styled">this</span> word.
+  </p>
+  <p class="spread-out">
+    This text uses spread-out letter spacing,
+    while
+    <span class="condensed">this fragment</span>
+    is condensed.
+  </p>
+  <p class="shadowed">
+    Look at this shadowed text!
+  </p>
+  <p id="stretched-words">
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit fusce vel sapien elit in malesuada.
+  </p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Explicit box size</title>
+  <style>
+    .sizedbox {
+      width: 200px;
+      height: 100px;
+      background-color: yellow;
+      border: 2px solid black;
+      padding: 12px;
+      margin: 4px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>
+        <div class="sizedbox" style="overflow: hidden">
+          (hidden) This content does not really
+          fit into the box, it overflows...
+        </div>
+      </td>
+      <td>
+        <div class="sizedbox" style="overflow: scroll">
+          (scroll) This content does not really
+          fit into the box, it overflows...
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="sizedbox" style="overflow: auto">
+          (auto) This content does not really
+          fit into the box, it overflows...
+        </div>
+      </td>
+      <td>
+        <div class="sizedbox" style="overflow: visible">
+          (visible) This content does not really
+          fit into the box, it overflows...
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

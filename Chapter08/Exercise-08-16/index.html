@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Construction with prototype</title>
+  <script>
+    var Employee = function (id, firstName,
+      lastName, title) {
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.title = title;
+    }
+
+    Employee.prototype.getFullName =
+      function () {
+        return this.lastName + ", " + this.firstName;
+      }
+
+    var philip = new Employee(1, "Philip", "Moore",
+      "CEO");
+    var jane = new Employee(2, "Jane", "Mortimer",
+      "CFO");
+
+    console.log(philip.getFullName());
+    console.log(jane.getFullName());
+  </script>
+</head>
+<body>
+  Listing 8-16: View the console output
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Passing arguments #2</title>
+  <script>
+    var input = "Chuck Norris";
+    var i = 1234;
+
+    // Point 1
+    function encrypt() {
+      // Point 2
+      var salt = "|";
+
+      function doEncrypt(input) {
+        var result = "";
+        for (i = 0; i < input.length; i++) {
+          // Point 3
+          result += input.charAt(i) + salt;
+        }
+        return result;
+      }
+      input = doEncrypt(input);
+      // Point 4
+    }
+    // Point 5
+    console.log(input);
+    encrypt();
+    console.log(input);
+    console.log(i);
+  </script>
+</head>
+<body>
+  Listing 7-13: View the console output
+</body>
+</html>

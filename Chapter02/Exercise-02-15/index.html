@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using links</title>
+  <style>
+    .rectangle {
+      width: 200px;
+      height: 100px;
+      margin: 100px 20px;
+      text-align:center;
+      color: white;
+    }
+    .red {
+      background-color: red;
+    }
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Go to <a href="http://en.wikipedia.org/wiki/HTML">
+    This page</a> for more info about HTML.
+  </p>
+  <p>
+    Open this
+    <a href="http://en.wikipedia.org/wiki/Markup_language"
+       target="_blank">link</a> in a new tab
+  </p>
+  <ul>
+    <li><a href="#red">Red</a></li>
+    <li><a href="#green">Green</a></li>
+    <li><a href="#blue">Blue</a></li>
+  </ul>
+  <div id="red" class="rectangle red">Red</div>
+  <div id="green" class="rectangle green">Green</div>
+  <div id="blue" class="rectangle blue">Blue</div>
+</body>
+</html>

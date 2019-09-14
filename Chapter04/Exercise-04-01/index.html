@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Registration</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h2>Fill in this form to register to Visual Studio Smarts Conference</h2>
+  <form action="#">
+    <fieldset>
+      <legend>Personal Data</legend>
+      <label for="fname">First Name:</label>
+      <input id="fname" type="text" name="fname" />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input id="lname" type="text" name="lname" />
+      <br />
+      <label for="email">Email:</label>
+      <input id="email" type="text" name="email" />
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Your Conference Account</legend>
+      <label for="login">Login name:</label>
+      <input id="login" type="text" name="login" />
+      <br />
+      <label for="pwd">Password:</label>
+      <input id="pwd" type="password" name="pwd" />
+      <br />
+      <label for="pwd2">Confirm Password:</label>
+      <input id="pwd2" type="password" name="pwd2" />
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Sessions</legend>
+        <p>What do you expect from sessions?</p>
+        <textarea id="comments" rows="3" cols="50" 
+          name="comments">
+        </textarea>
+      </fieldset>
+    <input type="submit" value="Register" />
+  </form>
+</body>
+</html>

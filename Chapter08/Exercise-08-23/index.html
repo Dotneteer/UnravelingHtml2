@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using the navigator object</title>
+  <style>
+    body {
+      font-family: "Verdana", "Arial", sans-serif;
+    }
+  </style>
+  <script>
+    function queryNavigator() {
+      var label = document.getElementById("props");
+      var out = "";
+
+      function addText(text, value) {
+        out += text + ": " + value + "<br/>";
+      }
+
+      addText("appCodeName", navigator.appCodeName);
+      addText("appName", navigator.appName);
+      addText("appVersion", navigator.appVersion);
+      addText("cookieEnabled", navigator.cookieEnabled);
+      addText("javaEnabled()", navigator.javaEnabled());
+      addText("language", navigator.language);
+      addText("platform", navigator.platform);
+      addText("product", navigator.product);
+      addText("userAgent", navigator.userAgent);
+      label.innerHTML = out;
+    }
+  </script>
+</head>
+<body onload="queryNavigator()">
+  <h3>Navigator properties</h3>
+  <p id="props"></p>
+</body>
+</html>

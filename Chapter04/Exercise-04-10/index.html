@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Using placeholder</title>
+  <style>
+    ::-webkit-input-placeholder {
+      font-style: italic;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      font-style: italic;
+    }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+      font-style: italic;
+    }
+
+    :-ms-input-placeholder {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h2>Specify your booking info</h2>
+  <form>
+    <label>
+      First name:
+      <input type="text" 
+        placeholder="John" 
+        maxlength="20"
+         />
+    </label>
+    <br />
+    <label>
+      Last name*:
+      <input type="text"
+        placeholder="Smith"
+        title="Please, specify the last name"
+        required />
+    </label>
+    <br />
+    <label>
+      Membership ID*:
+      <input type="text"
+        placeholder="ABC-123"
+        required
+        title="Three letters, dash, three digits"
+        pattern="[A-Za-z]{3}-\d{3}" />
+    </label>
+    <br />
+    <label>
+      Number of passengers*:
+      <input type="number"
+             placeholder="1-8"
+             required
+             min="1"
+             max="8" />
+    </label>
+    <br />
+    <input type="submit" value="Query" />
+  </form>
+</body>
+</html>

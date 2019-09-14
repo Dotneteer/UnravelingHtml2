@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Element properties</title>
+  <script>
+    function logProperties() {
+      console.log('ol properties:');
+      var ol = document
+        .getElementsByTagName('ol')[0];
+      console.log('start: ' + ol.start);
+      console.log('type: "' + ol.type + '"');
+      console.log('reversed: ' + ol.reversed);
+      console.log('reversed attr: "' +
+        ol.getAttribute('reversed') + '"');
+    }
+  </script>
+</head>
+<body onload="logProperties()">
+  <ol start="3" reversed>
+    <li id="item1">Item #1</li>
+    <li id="item2">Item #2</li>
+    <li id="item3">Item #3</li>
+  </ol>
+</body>
+</html>

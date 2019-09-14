@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>foreach(), filter(), map()</title>
+  <script>
+    var nums = [1, 2, 3, 4, 5];
+    nums.forEach(display);
+    console.log(nums.filter(even).toString());
+    console.log(nums.map(square).toString());
+
+    function display(e, i, a) {
+      console.log("a[" + i + "] = " + e);
+    }
+
+    function even(e, i, a) {
+      return e % 2 == 0;
+    }
+
+    function square(e, i, a) {
+      return e * e;
+    }
+  </script>
+</head>
+<body>
+  Listing 7-23: View the console output
+</body>
+</html>

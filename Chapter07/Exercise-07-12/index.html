@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Passing arguments #2</title>
+  <script>
+    function setYearOfBirth(obj, year) {
+      obj.yearOfBirth = year;
+      obj = new Object();
+      obj.yearOfBirth = 2001;
+    }
+
+    var me = new Object();
+    setYearOfBirth(me, 1968);
+    console.log(me.yearOfBirth);
+  </script>
+</head>
+<body>
+  Listing 7-12: View the console output
+</body>
+</html>

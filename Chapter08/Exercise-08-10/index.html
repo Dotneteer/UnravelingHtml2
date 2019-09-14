@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indexed notation</title>
+  <script>
+    var license = {
+      "1 unit": 122,
+      "2 units": 238,
+      "3 units": 350
+    }
+    license["over 3"] = 400;
+
+    var unit2 = "2 units";
+    console.log(license["1 unit"]);  // 122
+    console.log(license[unit2]);     // 238
+    console.log(license["3 units"]); // 350
+    console.log(license["over 3"]);  // 400
+  </script>
+</head>
+<body>
+  Listing 8-10: View the console output
+</body>
+</html>

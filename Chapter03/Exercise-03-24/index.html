@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using the &lt;video&gt; tag</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      margin-left: 24px;
+    }
+    p { 
+      width: 640px;
+    }
+  </style>  
+</head>
+<body>
+  <h1>Snorkeling in the Caribbean</h1>
+  <p>
+  Hey dude, In 2010 I cruised around a few great
+    Caribbean islands. Here is a short video about
+    my snorkeling experience.
+  </p>
+  <video controls
+    poster="Images/VideoPoster.png">
+    <source src="Video/Caribbean.webm" type="video/webm" />
+    <source src="Video/Caribbean.mp4" type="video/mp4" />
+      Sorry, HTML5 video is not supported.
+  </video>
+</body>
+</html>

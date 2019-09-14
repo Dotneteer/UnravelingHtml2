@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Processor</title>
+    <style>
+      body {
+        font-family: Verdana, Arial, sans-serif;
+        margin-left: 24px;
+      }
+      table {
+        border: 2px solid dimgray;
+        border-collapse: collapse;
+      }
+
+      td, th {
+        padding: 4px 8px;
+        border: 1px dotted dimgray;
+      }
+
+      th {
+        background-color: dimgray;
+        color: white;
+      }
+    </style>
+</head>
+<body>
+  <h1>Form Data</h1>
+    <table>
+    <thead>
+      <tr><th>Property</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <!-- Filled up by JavaScript -->
+    </tbody>
+  </table>
+  <br/>
+  <a id="back" href="#">Back to the caller</a>
+  <script src="scripts/jquery.min.js"></script>
+  <script>
+    $(function () {
+      var params = getFormParameters();
+      for (var parName in params) {
+        var row = $("<tr>")
+          .append($("<td>").html(parName))
+          .append($("<td>").html(params[parName]));
+        $("tbody").append(row);
+      }
+      $("#back").attr("href", getFormParameters()["caller"])
+    });
+    
+    function getFormParameters() {
+      var uri = window.location.search;
+      var result = {};
+      if (uri.indexOf("?") === -1) {
+        return {};
+      }
+      var query = uri.slice(1);
+      var params = query.split("&");
+      var i = 0;
+      while (i < params.length) {
+        var parameter = params[i].split("=");
+        result[parameter[0]] = parameter[1];
+        i++;
+      }
+      return result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splice</title>
+  <script>
+    var word = ["h", "e", "l", "l", "o"];
+    word.reverse();
+    console.log(word.toString());
+    var nums = [13, 4, 2, 21, 8, 31, 17];
+    nums.sort();
+    console.log(nums.toString());
+    nums.sort(compare);
+    console.log(nums.toString());
+    nums.sort(compareDesc);
+    console.log(nums.toString());
+
+    function compare(v1, v2) {
+      return v1 - v2;
+    }
+
+    function compareDesc(v1, v2) {
+      return v2 - v1;
+    }
+  </script>
+</head>
+<body>
+  Listing 7-20: View the console output
+</body>
+</html>

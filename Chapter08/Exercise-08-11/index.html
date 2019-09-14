@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data property attributes</title>
+  <script>
+    var car = new Object();
+    Object.defineProperty(car, "type",
+      {
+        writeable: false,
+        value: "FR-V"
+      });
+
+    console.log(car.type); // FR-V
+    // This has no effect
+    car.type = "Other";
+    console.log(car.type); // FR-V
+
+    var descr = Object.getOwnPropertyDescriptor(
+      car, "type");
+    console.log(descr.configurable); // false
+    console.log(descr.enumerable);   // false
+    console.log(descr.writable);     // false
+    console.log(descr.value);        // FR-V
+  </script>
+</head>
+<body>
+  Listing 8-11: View the console output
+</body>
+</html>

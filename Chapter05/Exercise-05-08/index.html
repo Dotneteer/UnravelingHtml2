@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using &lt;frame&gt;</title>
+  <style>
+    .seamless {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h3>No restriction</h3>
+  <iframe src="DisplayTitle.html"
+    width="200" height="88">
+  </iframe>
+  <h3>All restrictions</h3>
+  <iframe src="DisplayTitle.html"
+    width="200" height="88"
+    sandbox="">
+  </iframe>
+  <h3>Scripts allowed</h3>
+  <iframe src="DisplayTitle.html"
+    width="200" height="88"
+    sandbox="allow-scripts"
+    seamless
+    class="seamless">
+  </iframe>
+</body>
+</html>

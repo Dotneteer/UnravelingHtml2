@@ -1,0 +1,14 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  background-color: navy;
+}
+
+h2 {
+  color: green;
+  margin-left: 40px;
+  border-bottom: 4px dotted black;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alternating Table Rows</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    table { 
+      border-collapse: collapse;
+    }
+
+    td, th {
+      padding: 4px 8px;
+      border: 1px solid dimgray;
+    }
+
+    th {
+      font-weight: normal;
+      background-color: navy;
+      color: white;
+    }
+
+    tr:nth-child(odd) {
+      background-color: lightblue;
+    }
+
+  </style>
+</head>
+<body>
+  <table>
+    <tr><th>Region</th><th>Result</th></tr>
+    <tr><td>North</td><td>12%</td></tr>
+    <tr><td>East</td><td>42%</td></tr>
+    <tr><td>South</td><td>27%</td></tr>
+    <tr><td>West</td><td>19%</td></tr>
+  </table>
+</body>
+</html>

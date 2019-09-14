@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add new elements</title>
+  <base href="http://www.w3schools.com" />
+</head>
+<body onload="decorateLinks3()">
+  <p>
+    In this chapter you already met with many DOM
+    manipulation methods including
+    <a href="/jsref/met_node_appendchild.asp">
+      appendChild()
+    </a>,
+    <a href="/jsref/met_node_insertbefore.asp">
+      insertBefore()
+    </a>, and
+    <a href="/jsref/met_element_setattribute.asp">
+      setAttribute().
+    </a>
+  </p>
+  <script>
+    function decorateLinks() {
+      for (i = 0; i < document.links.length; i++) {
+        var link = document.links[i];
+        link.insertAdjacentText('beforeBegin', '[');
+        link.insertAdjacentText('afterEnd', ']');
+      }
+    }
+
+    function decorateLinks2() {
+      for (i = 0; i < document.links.length; i++) {
+        var link = document.links[i];
+        var openSpan = document.createElement('span');
+        openSpan.textContent = '[';
+        var closeSpan = document.createElement('span');
+        closeSpan.textContent = ']';
+        link.insertAdjacentElement('beforeBegin', openSpan);
+        link.insertAdjacentElement('afterEnd', closeSpan);
+      }
+    }
+
+    function decorateLinks3() {
+      for (i = 0; i < document.links.length; i++) {
+        var link = document.links[i];
+        link.insertAdjacentHTML('beforeBegin',
+          '<span>[</span>');
+        link.insertAdjacentHTML('afterEnd',
+          '<span>]</span>');
+      }
+    }
+
+  </script>
+</body>
+</html>

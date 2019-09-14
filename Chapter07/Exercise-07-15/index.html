@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array conversions</title>
+  <script>
+    var MappedNumber = function (name, locName) {
+      this.toString = function () {
+        return name;
+      }
+      this.toLocaleString = function () {
+        return locName;
+      }
+    }
+
+    var num1 = new MappedNumber("one", "egy");
+    var num2 = new MappedNumber("two", "kettő");
+    var num3 = new MappedNumber("three", "három");
+    var arr = [num1, num2, num3];
+
+    console.log(arr.toString());
+    console.log(arr.toLocaleString());
+  </script>
+</head>
+<body>
+  Listing 7-15: View the console output
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Figures</title>
+  <style>
+    body {
+      width: 720px;
+      margin-left: 16px;
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    header {
+      background-color: deepskyblue;
+      padding: 2px 16px;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    .byLine {
+      color: white;
+      font-style: italic;
+    }
+
+    .mainContent {
+      background-color: aliceblue;
+      padding: 4px 16px;
+    }
+
+    h2 {
+      color: navy;
+      border-bottom: 4px dotted cornflowerblue;
+    }
+
+    figure {
+      float: right;
+      margin: 0 0 16px 16px;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      font-style: italic;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      background-color: cornflowerblue;
+      padding: 1px 16px;
+    }
+
+      footer > p {
+        color: white;
+        font-size: 0.8em;
+      }
+  </style>
+
+</head>
+<body>
+  <article>
+    <header>
+      <h1>Visual Studio Platform and Extensibility</h1>
+      <p class="byLine">by Istvan Novak</p>
+    </header>
+    <div class="mainContent">
+      <section>
+        <h2>Thousand ways of extension</h2>
+        <p>
+          Well I know, it is an exaggeration to tell about 
+          &quot;a thousand ways&quot; when treating Visual Studio 
+          extensibility, but I'd like to point out that you 
+          have many choices. In this part I show you how many 
+          options you have when dealing with adding some extra 
+          stuff to Visual Studio. Reference materials, books, 
+          and articles generally enumerate about a dozen options. 
+          Instead of simply telling you what they are I would 
+          like to methodize them. The key to understand 
+          extensibility options is the architecture of 
+          the Visual Studio IDE
+          (<a href="#figure1">Figure 1</a>)
+        </p>
+        <figure id="figure1">
+          <a href="Figure1.gif" target="_blank">
+            <img src="Figure1.gif" width="307" height="118" />
+          </a>
+          <figcaption>
+            Figure 1: Visual Studio IDE
+          </figcaption>
+        </figure>
+        <p>
+          When running the Visual Studio IDE we start the devenv.exe
+          file. However, the IDE we see and work with is not 
+          just a simple monolithic .exe file or an executable 
+          divided into a few .dll files. It is a shell that 
+          provides a graphical environment to host functional 
+          units, called packages. What we perceive is a cooperation 
+          of the shell and hosted packages. The core functions 
+          of the IDE are also implemented in packages including 
+          the C# or Visual Basic project types, testing features, 
+          and many more. The majority of third-party extensions 
+          loaded into Visual Studio are also implemented in packages. 
+          Just to give you a feeling about how many of them are used: 
+          in my notebook I counted 129 packages including those 
+          installed with Visual Studio 2008 and third-parties.
+        </p>
+      </section>
+    </div>
+  </article>
+  <footer>
+    <p>
+      Full article published in CODE Magazine
+      in April, 2008.
+    </p>
+  </footer>
+</body>
+</html>

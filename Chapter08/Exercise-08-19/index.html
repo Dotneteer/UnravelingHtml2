@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prototype chaining</title>
+  <script>
+    // --- Base type
+    var Vehicle = function () {
+      this.vendor = "Toyota";
+    };
+
+    // --- Base type behavior
+    Vehicle.prototype.getVendor = function() {
+      return this.vendor;
+    };
+    Vehicle.prototype.getType = function() {
+      return "vehicle";
+    };
+
+    // --- Derived type
+    var Car = function() {
+      this.wheel = 4;
+    };
+
+    // --- Chain to base type
+    Car.prototype = new Vehicle();
+
+    // --- Override behavior
+    Car.prototype.getType = function() {
+      return "car";
+    };
+
+    // --- Derived type
+    var Boat = function() {
+      this.propeller = 1;
+    };
+
+    // --- Chain to base type
+    Boat.prototype = new Vehicle();
+
+    // --- Override behavior
+    Boat.prototype.getType = function() {
+      return "boat";
+    };
+
+    // --- Test
+    var car = new Car();
+    var boat = new Boat();
+    console.log("It's a " + car.getType());
+    console.log(car.getVendor());
+    console.log("wheels: " + car.wheel);
+    console.log("It's a " + boat.getType());
+    console.log(boat.getVendor());
+    console.log("props: " + boat.propeller);
+  </script>
+</head>
+<body>
+  Listing 8-19: View the console output
+</body>
+</html>

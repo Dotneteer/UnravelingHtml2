@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Changing content</title>
+</head>
+<body>
+  <p id="para">These are items:</p>
+  <ol id="list" start="1">
+    <li id="item1">Item #1</li>
+    <li id="item2">Item #2</li>
+    <li id="item3">Item #3</li>
+  </ol>
+  <button onclick="changeContent()">
+    Change content
+  </button>
+  <br />
+  <button onclick="incrementStart()">
+    Increment start
+  </button>
+  <br />
+  <button onclick="decrementStart()">
+    Decrement start
+  </button>
+  <script>
+    function changeContent() {
+      var para = document.getElementById('para');
+      var item = document.getElementById('item1');
+
+      para.innerHTML = 'These are '
+        + '<strong>new </strong> items:';
+
+      item.textContent = "First item";
+      item = item.nextElementSibling;
+      item.textContent = "Second item";
+      item = item.nextElementSibling;
+      item.textContent = "Third item";
+    }
+
+    function incrementStart() {
+      var list = document.getElementById('list');
+      var start = parseInt(list.getAttribute("start"));
+      start++;
+      list.setAttribute("start", start);
+    }
+
+    function decrementStart() {
+      var list = document.getElementById('list');
+      list.start--;
+    }
+  </script>
+</body>
+</html>

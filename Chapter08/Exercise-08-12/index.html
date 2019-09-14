@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Define accessor properties</title>
+  <script>
+    var person = {
+      firstName: "John",
+      _lastName: "Doe"
+    };
+    Object.defineProperty(person, "fullName",
+      {
+        writeable: false,
+        get: function () {
+          return this.lastName + ", "
+            + this.firstName;
+        }
+      });
+    Object.defineProperty(person, "lastName",
+      {
+        writeable: true,
+        get: function () {
+          return this._lastName;
+        },
+        set: function (value) {
+          if (value != "") {
+            this._lastName = value.toString();
+          }
+        }
+      });
+
+    console.log(person.fullName); // Doe, John
+    person.lastName = "";
+    console.log(person.fullName); // Doe, John
+    person.lastName = "Smith";
+    console.log(person.fullName); // Smith, John
+  </script>
+</head>
+<body>
+  Listing 8-12: View the console output
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Sample 15</title>
+  <style>
+    .box {
+      background-color: red;
+      background-image: url(Backgrounds/spaceneedle.jpg);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      background-clip: border-box;
+      float: left;
+      padding: 20px;
+      border: 8px solid orangered;
+      margin: 16px;
+      background: red url(Backgrounds/spaceneedle.jpg) top center no-repeat content-box border-box;
+    }
+
+    .content {
+      width: 240px;
+      height: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" style="background-origin: border-box;">
+    <div class="content"></div>
+  </div>
+</body>
+</html>

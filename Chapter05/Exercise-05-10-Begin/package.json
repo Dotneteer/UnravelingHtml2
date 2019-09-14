@@ -1,0 +1,11 @@
+{
+  "name": "unraveling-html5-2nd-edition",
+  "version": "1.0.0",
+  "description": "Code samples for the Unraveling HTML5, CSS, and JavaScript book",
+  "scripts": {
+    "start": "live-server --port=8080"
+  },
+  "keywords": [],
+  "author": "Istvan Novak (dotneteer@hotmail.com)",
+  "license": "ISC"
+}

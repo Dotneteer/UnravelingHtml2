@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using closures</title>
+  <script>
+    var addOp = createOp("add");
+    var subtractOp = createOp("subtract");
+
+    console.log(addOp(23, 12));      // 35
+    console.log(subtractOp(23, 12)); // 11
+
+    function createOp(kind) {
+      return function (a, b) {
+        if (kind == "add") {
+          return a + b;
+        }
+        else if (kind == "subtract") {
+          return a - b;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  Listing 8-7: View the console output
+</body>
+</html>

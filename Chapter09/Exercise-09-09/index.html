@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudo-class child selectors</title>
+  <style>
+    body {
+      font-family: Verdana, Helvetica, sans-serif;
+      margin-left: 16px;
+    }
+
+    #selector {
+      width: 200px;
+    }
+
+    div p {
+      margin: 0;
+    }
+
+    div span, div strong {
+      display: block;
+    }
+  </style>
+  <style id="childStyle">
+  </style>
+  <script>
+    function applyStyle() {
+      var child = document.getElementById('selector')
+        .value;
+      var rule = 'div ' + child +
+        '{ color: red; font-style: italic }';
+      var styleTag = document.getElementById('childStyle');
+      styleTag.innerText = rule;
+    }
+  </script>
+</head>
+<body>
+  <h1>Pesudo-class selectors</h1>
+  <p>
+    Type the name of a pseudo-selector in the
+    following textbox, such as <code>:first-child</code>
+    or <code>:nth-child(3n+1)</code>, etc., and
+    then click the Apply button.
+  </p>
+  Selector:
+  <input id="selector" type="text" autofocus />
+  <button onclick="applyStyle()">Apply</button>
+  <hr />
+  <p>This is a sample list:</p>
+  <div>
+    <p>Item #01 (p)</p>
+    <span>Item #02</span>
+    <p>Item #03 (p)</p>
+    <span>Item #04</span>
+    <span>Item #05</span>
+    <p>Item #06 (p)</p>
+    <p>Item #07 (p)</p>
+    <p>Item #08 (p)</p>
+    <span>Item #09</span>
+    <p>Item #10 (p)</p>
+    <strong>Item #11</strong>
+    <span>Item #12</span>
+    <p>Item #13 (p)</p>
+    <p>Item #14 (p)</p>
+    <span>Item #15</span>
+  </div>
+</body>
+</html>

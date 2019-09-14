@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrolling table body</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    thead th, tbody td, tfoot td {
+      width: 120px;
+    }
+      thead th + th, tbody td + td, tfoot td + td {
+        width: 60px;
+      }
+    th, td {
+      padding: 4px 8px;
+      border: 1px solid dimgray;
+    }
+    th, tfoot td {
+      background-color: navy;
+      color: white;
+      text-align: left;
+    }
+    tr:nth-child(odd) {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr><th>Operation</th><th>Result</th></tr>
+    </thead>
+    <tbody>
+      <!-- Filled up by JavaScript -->
+    </tbody>
+    <tfoot>
+      <!-- Filled up by JavaScript -->
+    </tfoot>
+  </table>
+
+  <script src="scripts/jquery.min.js"></script>
+  <!-- Generate random table content -->
+  <script>
+    $(function () {
+      var sum = 0;
+      for (var i = 0; i < 100; i++) {
+        var a = Math.floor(100 * Math.random());
+        var b = Math.floor(100 * Math.random());
+        var row = $("<tr>")
+          .append($("<td>").html(a + " + " + b + " ="))
+          .append($("<td>").html(a + b));
+        sum += a + b;
+        $("tbody").append(row);
+      }
+      var sumRow = $("<tr>")
+        .append($("<td>").html("Sum:"))
+        .append($("<td>").html(sum));
+      $("tfoot").append(sumRow);
+    });
+    
+  </script>
+</body>
+</html>

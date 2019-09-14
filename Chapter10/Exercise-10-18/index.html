@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using floating elements</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      margin: 16px;
+    }
+
+    .image {
+      width: 120px;
+      height: 90px;
+      margin: 8px;
+      margin-top: 0;
+      border: 2px solid dimgray;
+      background-color: lightgreen;
+      float: right;
+    }
+
+    .sidebar {
+      width: 240px;
+      margin: 8px;
+      margin-top: 0;
+      border: 2px solid dimgray;
+      background-color: lightskyblue;
+      padding: 0 8px;
+      float: left;
+    }
+
+      .sidebar h2 {
+        margin: 8px;
+      }
+
+    h1 {
+      background-color: orangered;
+      padding: 8px;
+      border-top: 4px solid dimgray;
+      border-bottom: 4px solid dimgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="image"></div>
+  <aside class="sidebar">
+    <h2>Did you know?</h2>
+    <p>
+      HTML block elements can be set to float
+      at the left or at the right edge of
+      the page
+    </p>
+  </aside>
+  <h1>Borders...</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit fusce vel sapien elit in
+    malesuada semper mi, id sollicitudin urna
+    fermentum ut fusce varius nisl ac ipsum
+    gravida vel pretium tellus tincidunt integer
+    eu augue augue nunc elit dolor, luctus
+    placerat scelerisque euismod, iaculis eu
+    lacus nunc mi elit, vehicula ut laoreet ac,
+    aliquam sit amet justo nunc tempor, metus vel.
+  </p>
+</body>
+</html>

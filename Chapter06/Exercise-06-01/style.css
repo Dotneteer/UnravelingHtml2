@@ -1,0 +1,12 @@
+﻿body {
+  font-family: Verdana, Arial, sans-serif;
+  margin-left: 24px;
+}
+
+h2 {
+  cursor: pointer;
+}
+
+.mono {
+  font-family: monospace;
+}

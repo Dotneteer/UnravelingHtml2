@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Registration</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h2>Fill in this form to register to Visual Studio Smarts Conference</h2>
+  <form action="#">
+    <fieldset>
+      <legend>Personal Data</legend>
+      <label for="salutation">Salutation</label>
+      <select id="salutation" name="salutation">
+        <option label="" value="" />
+        <option label="Mr." value="Mr." selected />
+        <option label="Mrs." value="Mrs." />
+        <option label="Ms." value="Ms." />
+        <option label="Dr." value="Dr." />
+      </select>
+      <br />
+      <label for="fname">First Name:</label>
+      <input id="fname" type="text" name="fname" autofocus />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input id="lname" type="text" name="lname" />
+      <br />
+      <label for="email">Email:</label>
+      <input id="email" type="text" name="email" />
+      <br />
+      <p>Your Smarts Membership status</p>
+      <label class="memberoption">
+        <input type="radio" name="membership" 
+          value="none" />
+        Not a member
+      </label>
+      <label class="memberoption">
+        <input type="radio" name="membership" 
+          value="silver" />
+        Silver member
+      </label>
+      <label class="memberoption">
+        <input type="radio" name="membership" 
+          value="gold" checked />
+        Gold member
+      </label>
+      <br />
+      <a href="#">Read more about Smarts membership</a>
+    </fieldset>
+    <fieldset>
+      <legend>Your Conference Account</legend>
+      <label for="login">Login name:</label>
+      <input id="login" type="text" name="login" />
+      <br />
+      <label for="pwd">Password:</label>
+      <input id="pwd" type="password" name="pwd" />
+      <br />
+      <label for="pwd2">Confirm Password:</label>
+      <input id="pwd2" type="password" name="pwd2" />
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Sessions</legend>
+      <p>What are the tracks you are interested in?</p>
+      <label>
+        <input type="checkbox" name="dev" checked />
+        Development
+      </label>
+      <label>
+        <input type="checkbox" name="alm" />
+        ALM
+      </label>
+      <label>
+        <input type="checkbox" name="aspnet" />
+        ASP.NET
+      </label>
+      <label>
+        <input type="checkbox" name="csharp" />
+        C#
+      </label>
+      <label>
+        <input type="checkbox" name="vb" />
+        Visual Basic
+      </label>
+      <label>
+        <input type="checkbox" name="sql" />
+        SQL
+      </label>
+      <p>What do you expect from sessions?</p>
+      <textarea id="comments" rows="3" cols="50" 
+        name="comments">
+      </textarea>
+    </fieldset>
+    <input type="submit" value="Register" />
+  </form>
+</body>
+</html>

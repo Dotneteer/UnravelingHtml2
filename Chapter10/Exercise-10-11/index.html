@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using borders</title>
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    .box {
+      margin: 16px;
+      padding: 16px;
+      border: 8px solid blue;
+      display: inline-block;
+    }
+
+    .content {
+      width: 100px;
+      height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>border-top-left-radius</h1>
+  <div class="box" style="border-top-left-radius: 20px">
+    <div class="content">20px</div>
+  </div>
+  <div class="box" style="border-top-left-radius: 40px">
+    <div class="content">40px</div>
+  </div>
+  <div class="box" style="border-top-left-radius: 80px 40px">
+    <div class="content">80px 40px</div>
+  </div>
+  <div class="box" style="border-top-left-radius: 50%">
+    <div class="content">50%</div>
+  </div>
+</body>
+</html>

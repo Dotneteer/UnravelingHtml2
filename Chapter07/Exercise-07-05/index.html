@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Regular expression literals</title>
+  <script>
+    var pattern = /[A-Z]{3}-\d{3}/gi;
+    var text = "AB-123 DEF-234 ert-456 -34";
+    console.log(pattern.test(text));
+    pattern.lastIndex = 0;
+    var matches;
+    do {
+      matches = pattern.exec(text);
+      console.log(matches);
+    }
+    while (matches != null);
+  </script>
+</head>
+<body>
+  Listing 7-5: View the console output
+</body>
+</html>

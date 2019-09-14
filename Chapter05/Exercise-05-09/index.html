@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom attributes</title>
+</head>
+<body>
+  <h3>Product details</h3>
+  <div id="computer"
+    data-product-cpu="4th generation Intel Core i5"
+    data-product-ssd="64/128/256/512 GB">
+    <h4>Surface 2 Pro</h4>
+    <p>CPU: <span id="s2ProCpu"></span></p>
+    <p>SSD: <span id="s2ProSsd"></span></p>
+    <button onclick="getDetails('computer',
+      's2ProCpu', 's2ProSsd')">
+      Get Details
+    </button>
+  </div>
+  <script>
+    function getDetails(prod, label1, label2) {
+      var prodNode = document.getElementById(prod);
+      var l1 = document.getElementById(label1);
+      var l2 = document.getElementById(label2);
+      l1.innerText =
+        prodNode.getAttribute('data-product-cpu');
+      l2.innerText = prodNode.dataset.productSsd;
+    }
+  </script>
+</body>
+</html>

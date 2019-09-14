@@ -1,0 +1,68 @@
+﻿.name {
+  min-width: 140px;
+}
+
+.fish-table {
+  border: 2px solid #07093D;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+  .fish-table td {
+    border: 1px solid #07093D;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.25em 0.5em;
+  }
+
+    .fish-table tr td:nth-child(2) {
+    font-family: "Segoe UI Semibold", Arial, sans-serif;;
+    min-width: 160px;
+    vertical-align: top;
+    padding-top: 12px;
+  }
+
+    .fish-table tr td:nth-child(3) {
+    font-size: 0.9em;
+    vertical-align: top;
+    padding-top: 12px;
+  }
+
+
+  .fish-table caption {
+    font-size: 1.25em;
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 8px;
+  }
+
+  .fish-table td {
+    border: 1px solid #07093D;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.25em 0.5em;
+  }
+
+  .fish-table th {
+    font-size: 1.1em;
+    text-align: left;
+    background-color: #07093D;
+    color: white;
+    padding: 4px 0 8px 8px;
+  }
+
+      .fish-table tr:nth-child(even) {
+      background-color: #9CC4E4;
+    }
+
+      .fish-table tr:nth-child(even) td:hover {
+        background-color: #107FC9;
+    }
+
+      .fish-table tr:nth-child(odd) {
+      background-color: #E9F2F9;
+    }
+
+  .fish-table tr:hover {
+    background-color: #107FC9;
+  }

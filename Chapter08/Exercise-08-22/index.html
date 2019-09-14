@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Using the window object</title>
+  <style>
+    body {
+      font-family: "Verdana", "Arial", sans-serif;
+    }
+
+    button {
+      border: 1px dotted dimgray;
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+    
+    button:hover {
+      background-color: aliceblue;
+    }
+  </style>
+  <script>
+    function queryWindow() {
+      var label = document.getElementById("props");
+      var out = "";
+
+      function addText(text, value) {
+        out += text + ": " + value + "<br/>";
+      } 
+
+      addText("Inner width", innerWidth);
+      addText("Inner height", innerHeight);
+      addText("Outer height", outerHeight);
+      addText("Outer height", outerHeight);
+      addText("Screen X", screenX);
+      addText("Screen Y", screenY);
+      addText("Screen left", screenLeft);
+      addText("Screen top", screenTop);
+      addText("Page X offset", pageXOffset);
+      addText("Page Y offset", pageYOffset);
+      label.innerHTML = out;
+    }
+
+    function alertSample() {
+      alert("This is an alert dialog");
+    }
+
+    function confirmSample() {
+      var result = confirm("Is this OK?");
+      alert("The result is " + result);
+    }
+
+    function promptSample() {
+      var result =
+        prompt("Your input", "value");
+      alert("The result is " + result);
+    }
+
+    function openSample1() {
+      open("http://developer.mozilla.org",
+        "Sample window",
+        "width=200,height=100," +
+        "menubar=no,top=200,left=300");
+    }
+    function openSample2() {
+      open("smallwindow.html",
+        "Sample window",
+        "width=400,height=200," +
+        "menubar=no,top=200,left=300");
+    }
+
+    var timer;
+    var counter;
+    function startTimer() {
+      counter = 0;
+      timer = setInterval(function () {
+        counter++;
+        var label1 = document.getElementById("label1");
+        label1.innerText = "Timer loops: " + counter;
+      }, 200);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+        var label1 = document.getElementById("label1");
+        label1.innerText = "Timer stopped.";
+      }
+    }
+
+    var timeout;
+    function startTimeout() {
+      var label2 = document.getElementById("label2");
+      label2.innerText = "Timeout set to 3 seconds...";
+      timeout = setTimeout(function () {
+        counter++;
+        label2.innerText = "Timeout event fired.";
+        timeout = null;
+      }, 3000);
+    }
+
+    function stopTimeout() {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+        var label2 = document.getElementById("label2");
+        label2.innerText = "Timeout event cancelled.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>Dialogs</h3>
+  <button onclick="alertSample()">
+    alert()
+  </button>
+  <button onclick="confirmSample()">
+    confirm()
+  </button>
+  <button onclick="promptSample()">
+    prompt()
+  </button>
+  <hr />
+  <h3>New window</h3>
+  <button onclick="openSample1()">
+    open() #1
+  </button>
+  <button onclick="openSample2()">
+    open() #2
+  </button>
+  <hr />
+  <h3>Window properties</h3>
+  <button onclick="queryWindow()">
+    Get window properties
+  </button>
+  <p id="props"></p>
+  <h3>Timers</h3>
+  <button onclick="startTimer()">
+    setInterval();
+  </button>
+  <button onclick="stopTimer()">
+    clearInterval();
+  </button>
+  <p id="label1">No interval set.</p>
+  <hr />
+  <button onclick="startTimeout()">
+    setTimeout();
+  </button>
+  <button onclick="stopTimeout()">
+    clearTimeout();
+  </button>
+  <p id="label2">No timeout set.</p>
+</body>
+</html>

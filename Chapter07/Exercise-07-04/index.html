@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions with argument</title>
+  <script>
+    // Define a constructor for Child
+    var Child = function (name, born) {
+      this.name = name;
+      this.born = born;
+      this.ageInYear = function (year) {
+        return year - born;
+      };
+    }
+
+    // Create a Child
+    var ester = new Child("Ester", 1996);
+    console.log("Ester will be "
+      + ester.ageInYear(2016)
+      + " years old.");
+  </script>
+</head>
+<body>
+  Listing 7-4: View the console output
+</body>
+</html>

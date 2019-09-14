@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Function arguments</title>
+  <script>
+    function sum() {
+      var result = 0;
+      for (var i = 0; i < arguments.length; i++) {
+        result += arguments[i];
+      }
+      return result;
+    }
+
+    console.log(sum(12));         // 12
+    console.log(sum(12, 23));     // 35
+    console.log(sum(12, 23, 34)); // 69
+  </script>
+</head>
+<body>
+  Listing 8-4: View the console output
+</body>
+</html>

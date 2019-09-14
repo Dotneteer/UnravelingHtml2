@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions</title>
+  <script>
+    // Define a constructor for Car
+    var Car = function (manuf, type, regno) {
+      this.manufacturer = manuf;
+      this.type = type;
+      this.regno = regno;
+      this.getHorsePower =
+        function () { return 97; }
+    }
+
+    // Create a Car
+    var car = new Car("Honda",
+      "FR-V", "ABC-123");
+    console.log("Horse power: " +
+      car.getHorsePower());
+
+    // It is a stronger car
+    car.getHorsePower =
+      function () { return 127; };
+    console.log("Horse power: " +
+      car.getHorsePower());
+  </script>
+</head>
+<body>
+  Listing 7-3: View the console output
+</body>
+</html>

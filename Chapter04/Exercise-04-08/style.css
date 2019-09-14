@@ -1,0 +1,24 @@
+body {
+  width: 540px;
+  margin-left: 24px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+input {
+  font-size: 1.2em;
+}
+
+button {
+  padding: 8px 16px;
+  border: 2px dotted dimgray;
+  border-radius: 12px;
+}

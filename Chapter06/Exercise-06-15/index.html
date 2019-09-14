@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple event handler</title>
+</head>
+<body>
+  <button onclick="this.textContent='Clicked.'">
+    Click me!
+  </button>
+  <br />
+  <button onclick="nowMe()">
+    Now, click me!
+  </button>
+  <script>
+    function nowMe() {
+      document
+        .getElementsByTagName('button')[0]
+        .setAttribute('hidden', true);
+    }
+  </script>
+</body>
+</html>

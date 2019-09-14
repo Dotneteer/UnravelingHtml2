@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Issues with closure variables</title>
+  <script>
+    function giveMeFunctions() {
+      var functions = [];
+      for (var i = 0; i < 3; i++) {
+        functions[i] = function () {
+          return i * i;
+        }
+      }
+      return functions;
+    }
+
+    var myFunctions = giveMeFunctions();
+    for (var i = 0; i < myFunctions.length; i++) {
+      console.log(i + ": " + myFunctions[i]());
+    }
+  </script>
+</head>
+<body>
+  Listing 8-9: View the console output
+</body>
+</html>

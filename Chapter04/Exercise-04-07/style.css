@@ -1,0 +1,43 @@
+body {
+  width: 540px;
+  margin-left: 24px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+fieldset {
+  padding: 8px 12px;
+  background-color: aliceblue;
+  margin-bottom: 8px;
+}
+
+fieldset label {
+  display: inline-block;
+  width: 140px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.memberoption {
+  width: 160px !important;
+}
+p {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fname, #lname, #login, #pwd, #pwd2 {
+  width: 160px;
+}
+
+#email {
+  width: 240px;
+}

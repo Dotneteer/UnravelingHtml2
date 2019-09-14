@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualizing Progress</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="Scripts/changeby.js"></script>
+</head>
+<body>
+  <p>
+    Survey progress:
+    <progress id="progress" max="100" value="10" />
+  </p>
+  <form>
+    <button formaction="javascript:changeBy(-10)">
+      <img src="Images/minus.png" />
+      <br />
+      Decrement
+    </button>
+    <button formaction="javascript:changeBy(10)">
+      <img src="Images/plus.png" />
+      <br />
+      Increment
+    </button>
+  </form>
+</body>
+</html>

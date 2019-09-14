@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>reduce(), reduceRight()</title>
+  <script>
+    var nums = [1, 2, 3, 4, 5];
+    console.log(nums.reduce(sum));       // 15
+    console.log(nums.reduce(sum, 20));   // 35
+    console.log(nums.reduce(calc));      // 9
+    console.log(nums.reduceRight(calc)); // 13
+
+    function sum(prev, curr, i, a) {
+      return prev + curr;
+    }
+
+    function calc(prev, curr, i, a) {
+      return prev + (curr - i) * 2;
+    }
+  </script>
+</head>
+<body>
+  Listing 7-24: View the console output
+</body>
+</html>

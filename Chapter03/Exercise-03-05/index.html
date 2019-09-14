@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Footers</title>
+  <style>
+    body {
+      width: 720px;
+      margin-left: 16px;
+      font-family: Verdana, Arial, sans-serif;
+    }
+
+    .pageHeader {
+      background-color: deepskyblue;
+      padding: 2px 16px;
+    }
+
+    .articleHeader {
+      margin-left: 8px;
+      padding: 2px 16px;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    .byLine {
+      color: white;
+      font-style: italic;
+    }
+
+    .mainContent {
+      background-color: aliceblue;
+      padding: 4px 16px;
+      margin: 4px 16px;
+    }
+
+    h2 {
+      color: navy;
+      border-bottom: 4px dotted cornflowerblue;
+    }
+
+    h3 {
+      color: dimgray;
+      font-size: 0.8em;
+      font-style: italic;
+      margin-top: -12px;
+      margin-bottom: 8px;
+    }
+
+    .pageFooter {
+      background-color: cornflowerblue;
+      padding: 1px 16px;
+    }
+
+      footer.pageFooter> p {
+        color: white;
+        font-size: 0.8em;
+      }
+
+    .articleFooter {
+      background-color: navy;
+      padding: 0px 16px;
+      margin: -16px 16px 4px 16px;
+      color: white;
+    }
+
+    footer.articlefooter > p {
+      padding: 4px 0;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <header class="pageHeader">
+    <h1>Articles about Visual Studio</h1>
+    <p class="byLine">edited by Istvan Novak</p>
+  </header>
+  <article>
+    <header class="articleHeader">
+      <h2>Visual Studio Platform and Extensibility</h2>
+      <h3>April, 2008</h3>
+    </header>
+    <div class="mainContent">
+      <p>
+        Sed tincidunt hendrerit iaculis. Phasellus eget
+        dolor ac nisi porttitor porta. Integer tortor sem,
+        condimentum a auctor ac, interdum eget.
+      </p>
+    </div>
+    <footer class="articleFooter">
+      <p>Viewed: 12,419</p>
+    </footer>
+  </article>
+  <article>
+    <header class="articleHeader">
+      <h2>Creating Visual Studio Packages</h2>
+      <h3>June, 2009</h3>
+    </header>
+    <div class="mainContent">
+      <p>
+        Phasellus condimentum suscipit molestie. Praesent
+        volutpat nunc orci, rhoncus accumsan nunc sodales
+        molestie. Proin quis risus eget mauris ultricies tempor.
+      </p>
+    </div>
+    <footer class="articleFooter">
+      <p>Viewed: 18,048</p>
+    </footer>
+  </article>
+  <footer class="pageFooter">
+    <p>&copy; Super Visual Studio Articles Community, 2013</p>
+  </footer>
+</body>
+</html>

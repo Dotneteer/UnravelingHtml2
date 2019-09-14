@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extending the prototype</title>
+  <script>
+    Number.prototype.square =
+      function () {
+        return this.valueOf() * this.valueOf();
+      }
+
+    String.prototype.wrap =
+      function (begin, end) {
+        return begin + this.valueOf() + end;
+      }
+
+    console.log((13).square());        // 169
+    console.log("Hi!".wrap("[", "]")); // [Hi!]
+  </script>
+</head>
+<body>
+  Listing 8-18: View the console output
+</body>
+</html>

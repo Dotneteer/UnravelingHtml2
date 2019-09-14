@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add new elements</title>
+</head>
+<body>
+  <p>These are items:</p>
+  <ol id="list" start="1">
+    <li id="item1">Item #1</li>
+    <li id="item2">Item #2</li>
+    <li id="item3">Item #3</li>
+  </ol>
+  <button onclick="addToTop()">
+    Add new item to top
+  </button>
+  <br />
+  <button onclick="addAfterFirst()">
+    Add new item after the first child
+  </button>
+  <br />
+  <button onclick="addToBottom()">
+    Add new item to bottom
+  </button>
+  <script>
+    function addToTop() {
+      var list = document.getElementById('list');
+      var firstItem = list.firstElementChild;
+      var newNode = createNewNode("addToTop");
+      list.insertBefore(newNode, firstItem);
+    }
+
+    function addAfterFirst() {
+      var list = document.getElementById('list');
+      var firstItem = list.firstElementChild;
+      var secondItem = firstItem.nextElementSibling;
+      var newNode = createNewNode("addAfterFirst");
+      list.insertBefore(newNode, secondItem);
+    }
+
+    function addToBottom() {
+      var list = document.getElementById('list');
+      var newNode = createNewNode("addToBottom");
+      list.appendChild(newNode);
+    }
+
+    function createNewNode(message) {
+      var item = document.getElementById('list');
+      var count = item.childElementCount;
+      var newNode = document.createElement('li');
+      newNode.textContent =
+        "item #" + (count + 1) + " ("
+        + message + ")";
+      return newNode;
+    }
+  </script>
+</body>
+</html>
