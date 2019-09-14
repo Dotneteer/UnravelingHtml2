@@ -9,6 +9,6 @@
   "author": "Istvan Novak (dotneteer@hotmail.com)",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^2.2.3"
+    "jquery": "^3.4.1"
   }
 }
